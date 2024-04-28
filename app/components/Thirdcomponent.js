@@ -3,7 +3,7 @@ import React from 'react'
 const Thirdcomponent=() => {
     return(
       <>
-      <div className="flex flex-wrap w-4/5 mx-auto justify-around text-white mt-10">
+      <div className="flex flex-wrap xl:w-full 2xl:w-4/5 mx-auto justify-around text-white mt-10">
             <div className="flex flex-col items-center justify-center space-y-3">
               <h2 className="text-lg">Contact</h2>
               <img className="w-[150px] h-[150px] object-cover rounded-full " src="https://i.makeagif.com/media/7-27-2021/KnbmDj.gif" alt="Levi Gif" />
