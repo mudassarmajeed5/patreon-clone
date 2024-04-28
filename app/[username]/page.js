@@ -8,16 +8,18 @@ const Username = ({ params }) => {
     get_amount.value = e.target.innerText;
   };
   useEffect(() => {
-    getData()
-  
-    
-  }, [])
-  
-  let getData = async() => {
-    let u = await fetchUser(params.username);
-    console.log(u);
-    setCurrentUser(u);
-  }
+    const getData = async () => {
+      try {
+        const userData = await fetchUser(params.username);
+        setCurrentUser(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    getData();
+
+  }, [params.username])
   
   
 

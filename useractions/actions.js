@@ -3,13 +3,13 @@ import connectDB from "@/Database/mongodb"
 import User from "@/models/User";
 
 export const fetchUser = async(username) => {
-  await connectDB();
+//   await connectDB();
   let u = await User.findOne({username:username});
   let user = u.toObject({flattenObjectIds:true})
   return user;
 }
 export const UpdateProfile=async(data,oldusername) => {
-    await connectDB();
+    // await connectDB();
     // Check if username is available
     let NData = Object.fromEntries(data);
     if(oldusername!==NData.username)
